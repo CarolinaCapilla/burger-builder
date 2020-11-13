@@ -38,6 +38,7 @@ class BurgerIngredient extends Component {
   }
 }
 
+// Prop-types validation
 BurgerIngredient.propTypes = {
   type: PropTypes.string.isRequired,
 };
