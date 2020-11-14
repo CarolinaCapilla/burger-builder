@@ -55,12 +55,20 @@ class BurgerBuilder extends Component {
   };
 
   render() {
+    const disabledInfo = {
+      ...this.state.ingredients,
+    };
+    for (let key in disabledInfo) {
+      disabledInfo[key] = disabledInfo[key] <= 0;
+    } // will return salad: true, meat: false and so on. This info will be used to disabled to + or - button if ingredient type returns false
+
     return (
       <Auxiliary>
         <Burger ingredients={this.state.ingredients} />
         <BuildControls
           ingredientAdded={this.addIngredientHandler}
           ingredientDeducted={this.removeIngredientHandler}
+          disabled={disabledInfo}
         />
       </Auxiliary>
     );
