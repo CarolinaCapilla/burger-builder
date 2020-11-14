@@ -2,10 +2,16 @@
   width: 100%;
   margin: auto;
   height: 250px;
-  /* overflow: scroll; */
+  overflow: scroll;
+  -ms-overflow-style: none; /* hides scrollbar in IE and Edge */
+  scrollbar-width: none;
   text-align: center;
   font-weight: bold;
   font-size: 1.2rem;
+}
+
+.Burger::-webkit-scrollbar {
+  display: none; /* hides scrollbar in Chrome */
 }
 
 /* MEDIA QUERIES */
