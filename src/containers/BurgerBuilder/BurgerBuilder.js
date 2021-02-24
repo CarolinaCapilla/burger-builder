@@ -16,10 +16,6 @@ const INGREDIENTS_PRICES = {
 };
 
 class BurgerBuilder extends Component {
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {...}
-  // }
   state = {
     ingredients: {
       salad: 0,
@@ -85,7 +81,6 @@ class BurgerBuilder extends Component {
 
   purchaseContinueHandler = () => {
     this.setState({ loading: true });
-    // alert("You Continue");
     const order = {
       ingredients: this.state.ingredients,
       price: this.state.totalPrice,

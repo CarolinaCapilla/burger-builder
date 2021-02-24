@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import classes from "./Burger.module.css";
-import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
+import classes from './Burger.module.css';
+import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 const burger = (props) => {
   let transformedIngredients = Object.keys(props.ingredients) // we convert our Object into Array to be able to call map on it
@@ -17,10 +17,10 @@ const burger = (props) => {
     transformedIngredients = <p>You can start building your burger!</p>;
   }
   return (
-    <div className={classes["Burger"]}>
-      <BurgerIngredient type='bread-top'></BurgerIngredient>
+    <div className={classes['Burger']}>
+      <BurgerIngredient type="bread-top"></BurgerIngredient>
       {transformedIngredients}
-      <BurgerIngredient type='bread-bottom'></BurgerIngredient>
+      <BurgerIngredient type="bread-bottom"></BurgerIngredient>
     </div>
   );
 };

@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import Auxiliary from "../../hoc/Auxiliary";
-import Toolbar from "../Navigation/Toolbar/Toolbar";
-import SideDrawer from "../Navigation/SideDrawer/SideDrawer";
+import React, { Component } from 'react';
+import Auxiliary from '../../hoc/Auxiliary';
+import Toolbar from '../Navigation/Toolbar/Toolbar';
+import SideDrawer from '../Navigation/SideDrawer/SideDrawer';
 
-import classes from "./Layout.module.css";
+import classes from './Layout.module.css';
 
 class Layout extends Component {
   state = {
@@ -28,7 +28,7 @@ class Layout extends Component {
           closed={this.sideDrawerClosedHandler}
           open={this.state.showSideDrawer}
         />
-        <main className={classes["Content"]}>{this.props.children}</main>
+        <main className={classes['Content']}>{this.props.children}</main>
       </Auxiliary>
     );
   }
